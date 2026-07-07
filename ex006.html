@@ -11,8 +11,9 @@
     window.alert('Bem vindo ao sistema de formatação monetária');
     let value = Number(window.prompt('Digite o valor que deseja formatar'));
     let money_value = parseFloat(value).toFixed(2).replace('.',',');
+    let value_real = value.toLocaleString('pt-BR', {style: 'currency','currency': 'BRL'});//formata para formato monetário,o valor do segundo currency pode ser alterado para moeda de preferencia como 'EUR' ou 'USD'
 
-    document.write(`O sistema converteu:<br><strong>${value}</strong><br>Para:<strong>${money_value}</strong>`);
+    document.write(`O sistema converteu:<br><strong>${value}</strong><br>Para:<br><strong>${money_value}</strong><br>`);
     </script>
 </body>
 </html>
