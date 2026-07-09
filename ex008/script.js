@@ -1,4 +1,4 @@
-a.innerText = window.document.querySelector('div#area');
+a = window.document.querySelector('div#area');
 
 a.addEventListeener('click',clique)
 a.addEventListeener('mouseenter',entrar)
