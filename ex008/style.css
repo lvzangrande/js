@@ -1,0 +1,20 @@
+body{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    background-color: #022;
+    color: paleturquoise;
+    font: normal 17pt Arial;
+}
+div#area{
+    width: 500px;
+    height: 500px;
+    background-color: #035;
+    color: #fff;
+    text-align: center;
+    line-height: 500px;
+}
