@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Perfil com JS - ex010</title>
+    </head>
+    <body>
+        <header><h1>CRIE SEU PERFIL</h1></header>
+        <div class="perguntas">
+            <input type="text" placeholder="Nome" class="entrada" id="nome" >
+
+            <input type="email" placeholder="email" class="entrada" id="email" >
+
+            <input type="tel" placeholder="telefone" class="entrada" id="telefone" >
+
+            <label>Ano de nascimento</label>
+            <input type="number" min='1920' max='' class="entrada" id="data_nasc" >
+
+            <input type="text" placeholder="Descrição do perfil" class="entrada" id="descricao" >
+
+            <select id="profissao" >
+                <option>Selecione sua profissão</option>
+                <option>Desenvolvedor de Sistemas</option>
+                <option>Engenheiro de Software</option>
+                <option>Analista de Sistemas</option>
+                <option>Outra</option>
+                <option>Desempregado</option>
+            </select>
+            
+            <input type="button" class="botao" value="Criar">
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
