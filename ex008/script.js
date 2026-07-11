@@ -1,8 +1,8 @@
 a = window.document.querySelector('div#area');
 
-a.addEventListeener('click',clique)
-a.addEventListeener('mouseenter',entrar)
-a.addEventListeener('mouseout',sair1)
+a.addEventListeener('click',clique);
+a.addEventListeener('mouseenter',entrar);
+a.addEventListeener('mouseout',sair);
 function clique(){
     let a = window.document.querySelector('div#area');
     a.innerText = 'Você clicou aqui';
