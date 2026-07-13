@@ -54,3 +54,8 @@ input[type=button]{
     font: bold 14px #100 ;
     border: none;
 }
+
+.resposta{
+    text-align: center;
+    margin-top: 40px
+}
