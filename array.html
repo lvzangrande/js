@@ -28,11 +28,27 @@
 
         const carrinho = [
             {
-                nome: "",
-                valor:"",
-                tag: ["Em alta","Cozinha","Desconto"]
+                nome:   "Faca guinzo",
+                valor:  299.99,
+                tag:    ["Em alta","Cozinha","Desconto"]
+            },
+                        {
+                nome: "Tico tico",
+                valor:999.99,
+                tag: ["Em alta","Ferramentas","Desconto"]
+            },
+                        {
+                nome: "Micro-ondas",
+                valor:499.99,
+                tag: ["Em alta","eletrodomestico","Desconto"]
             }
-        ]
+        ];
+
+        let somaTotal = 0
+        carrinho.map(produto => {//map é como se fosse um foreach do php
+            somaTotal += produto["valor"]
+        })
+        console.log(`A soma é ${somaTotal}`);
     </script>
 </body>
 </html>
