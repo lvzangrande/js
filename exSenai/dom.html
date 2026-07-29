@@ -13,14 +13,15 @@
 
     <img src="https://placehold.co/600x400" id="imgIlustrativa">
 
-    <button id="botaoTop" type="button">TESTE</button>
+    <button id="botaoTop" type="button" class="visivel">TESTE</button>
     
     <div class="oculto modal" id="modal">
         <h2>titulo da modal</h2>
         <p>DESCRIÇÃO</p>
-        <h1 id="contador"></h1>
         <button type="button" id="close">Fechar</button>
     </div>
+
+    <h1 id="contador"></h1>
 
     <style>
         .chamativo{
@@ -64,17 +65,23 @@
         let contador = 0;
         
         const modal = document.querySelector('#modal');
+        const testar = document.querySelector('#botaoTop');
         function abrirModal(){
-            contador++
-            document.querySelector('#contador').innerHTML = contador
             modal.classList.remove('oculto');
             modal.classList.add('visivel');
 
+            testar.classList.remove('visivel');
+            testar.classList.add('oculto');
         }
 
         function fecharModal(){
             modal.classList.remove('visivel');
             modal.classList.add('oculto');
+            contador++;
+            document.querySelector('#contador').innerHTML = contador;
+
+            testar.classList.remove('oculto');
+            testar.classList.add('visivel');
         }
 
         const botao = document.querySelector("#botaoTop");
