@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex001</title>
+</head>
+<body>
+    <script>
+        let listaProdutos = [
+            {
+                nome: "He-man",
+                descricao: "De mestres do universo",
+                preco: 299.90,
+                tags: ["usado", "em alta"],
+                imagem: ""
+            },
+            {
+                nome: "Leon S. Kennedy",
+                descricao: "De Resident Evil",
+                preco: 599.90,
+                tags: ["novo", "em alta", "Resident Evil"],
+                imagem: ""
+            },
+            {
+                nome: "Arthur Morgan",
+                descricao: "De Red Dead Redemption",
+                preco: 599.90,
+                tags: ["semi-novo", "em alta", "Red Dead Redemption"],
+                imagem: ""
+            },
+        ];
+
+        produtosEmAlta = listaProdutos.filter(p => p.tags.includes("em alta"))
+        console.log(produtosEmAlta)
+        
+    </script>
+</body>
+</html>
