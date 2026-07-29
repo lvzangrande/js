@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while</title>
+</head>
+<body>
+    <script>
+        let repostaUser = prompt("Quer ver alguns números");
+        let userQuerContinuar = repostaUser == "s";
+        let contador = 0;
+        while(userQuerContinuar){
+            console.log(`Valor do contador é ${contador}`);
+
+            repostaUser = prompt("Quer ver alguns números?");
+            userQuerContinuar = respostaUser == 's';
+
+            contador++;
+        }
+    </script>
+</body>
+</html>
