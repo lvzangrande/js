@@ -1,0 +1,6 @@
+Desenvolver uma modal que abre e fecha com estilização moderna. 
+1 - Aplicar fundo esmaecido, entrada suave do corpo da modal.
+2 - Desenvolver animação hover para os botões
+3 - Deve ser contabilizado e mostrado em tela o número de vezes que a modal foi aberta/fechada
+
+entregar arquivo HTML
