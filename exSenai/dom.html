@@ -18,6 +18,7 @@
     <div class="oculto modal" id="modal">
         <h2>titulo da modal</h2>
         <p>DESCRIÇÃO</p>
+        <h1 id="contador"></h1>
         <button type="button" id="close">Fechar</button>
     </div>
 
@@ -61,10 +62,14 @@
         }
         
         let contador = 0;
+        
         const modal = document.querySelector('#modal');
         function abrirModal(){
+            contador++
+            document.querySelector('#contador').innerHTML = contador
             modal.classList.remove('oculto');
             modal.classList.add('visivel');
+
         }
 
         function fecharModal(){
