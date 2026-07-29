@@ -15,11 +15,36 @@
 
     <button id="botaoTop" type="button">TESTE</button>
     
+    <div class="oculto modal" id="modal">
+        <h2>titulo da modal</h2>
+        <p>DESCRIÇÃO</p>
+        <button type="button" id="close">Fechar</button>
+    </div>
+
     <style>
         .chamativo{
             background-color: red;
             color: white;
             font: arial 10px bold;
+        }
+        .oculto{
+            display: none;
+            visibility: hidden;
+        }
+        .visivel{
+            display: block;
+            visibility: visible;
+        }
+
+        .modal{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
         }
     </style>
     <script>
@@ -28,21 +53,30 @@
         
         const nome = prompt("Qual o seu nome")
         if(nome == "admin"){
-            paragrafo.innerText = "Eu sou o root"
+            paragrafo.innerText = "Eu sou o root";
             paragrafo.classList.add("chamativo");
         }
         else{
-            paragrafo.innerText = "Eu sou mortal"
+            paragrafo.innerText = "Eu sou mortal";
         }
         
+        let contador = 0;
+        const modal = document.querySelector('#modal');
+        function abrirModal(){
+            modal.classList.remove('oculto');
+            modal.classList.add('visivel');
+        }
+
+        function fecharModal(){
+            modal.classList.remove('visivel');
+            modal.classList.add('oculto');
+        }
+
         const botao = document.querySelector("#botaoTop");
         botao.addEventListener('click',abrirModal)
 
-        abrirModal(){
-            const modal = document.querySelector('#modal');
-            modal.classList
-        }
-
+        const fechar = document.querySelector("#close");
+        fechar.addEventListener('click',fecharModal);
     </script>
 </body>
 </html>
