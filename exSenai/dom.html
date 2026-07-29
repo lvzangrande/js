@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo DOM</title>
+</head>
+<body>
+    <h2 id="titulo">Aprendendo o DOM</h2>
+    
+    <p id="paragrafo01">Manipulando elemento com JavaScript</p>
+    <p id="paragrafo02">Depois dos fundamentos, iremos testar API</p>
+
+    <img src="https://placehold.co/600x400" id="imgIlustrativa">
+
+    <button id="botaoTop" type="button">TESTE</button>
+    
+    <style>
+        .chamativo{
+            background-color: red;
+            color: white;
+            font: arial 10px bold;
+        }
+    </style>
+    <script>
+        const paragrafo = document.querySelector("p#paragrafo02");
+        console.log(paragrafo);
+        
+        const nome = prompt("Qual o seu nome")
+        if(nome == "admin"){
+            paragrafo.innerText = "Eu sou o root"
+            paragrafo.classList.add("chamativo");
+        }
+        else{
+            paragrafo.innerText = "Eu sou mortal"
+        }
+        
+        const botao = document.querySelector("#botaoTop");
+        botao.addEventListener('click',abrirModal)
+
+        abrirModal(){
+            const modal = document.querySelector('#modal');
+            modal.classList
+        }
+
+    </script>
+</body>
+</html>
