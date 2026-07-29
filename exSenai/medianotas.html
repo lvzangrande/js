@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex003</title>
+</head>
+<body>
+    <script>
+        const MINIMO_PRESENCA = 75;
+        const mediaAluno = prompt("Qual a média do aluno"); 
+        const presencaAluno = prompt("Qual a presença do aluno"); 
+
+        if(presencaAluno < MINIMO_PRESENCA || mediaAluno < 35){
+            console.log("REPROVADO");
+        }
+        else if(mediaAluno < 50){
+            console.log("RECUPERAÇÃO");
+        }
+        else{
+            console.log("APROVADO");
+        }
+    </script>
+</body>
+</html>
