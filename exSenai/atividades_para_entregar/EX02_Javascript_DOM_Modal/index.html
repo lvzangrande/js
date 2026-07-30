@@ -6,13 +6,17 @@
         <title>EX 02</title>
     </head>
     <body>
+        <button id="abrir" class="">Abrir</button>
         <div id='modal' class="modal oculto">
             <h1>Olha eu consegui fazer :)</h1>
+            <button id="fechar" class="visivel">Fechar</button>
         </div>
+        <p>Você abriu o pop-up <a class=".contador">0</a> vezes</p>
         <style>
             .modal{
                 background-color: #333;
                 color: #fff;
+                transition: 1s;
             }
             .oculto{
                 display: none;
@@ -24,7 +28,34 @@
             }
         </style>
         <script>
+            let modal = document.querySelector('#modal');
+            let botao_abrir = document.querySelector('#abrir');
+            let botao_fechar = document.querySelector('#fechar');
+            let exibir_contador = document.querySelector('.contador');
+            
+            let contador = 0;
+    
+            function abrir(){
+                modal.classList.remove('oculto');
+                modal.classList.add('visivel');
 
+                botao_abrir.classList.remove('visivel');
+                botao_abrir.classList.add('oculto');
+
+                contador ++;
+                document.querySelector('#contador').innerText = contador;
+            }
+            function fechar(){
+                
+                modal.classList.add('oculto');
+                modal.classList.remove('visivel'); 
+                
+                botao_abrir.classList.remove('oculto');
+                botao_abrir.classList.add('visivel');
+            }
+
+            botao_abrir.addEventListener('click',abrir);
+            botao_fechar.addEventListener('click',fechar);
         </script>
     </body>
     </html>
